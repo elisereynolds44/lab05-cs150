@@ -14,7 +14,7 @@ def _omit(omitted_keys, d):
 
 # Custom Display Components
 def Card(children, **kwargs):
-    return html.Section(className="card", children=children, **_omit(["style"], kwargs))
+    return html.Section(className="card", children=children, **_omit(["style", "className"], kwargs))
 
 
 def FormattedSlider(**kwargs):

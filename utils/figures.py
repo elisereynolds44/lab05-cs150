@@ -177,28 +177,29 @@ def serve_table_confusion_matrix(model, X_test, y_test, Z, threshold):
         html.Thead([
             html.Tr([
                 html.Th(""),
-                html.Th("Predicted Negative"),
-                html.Th("Predicted Positive"),
+                html.Th("Predicted Negative", style={"border": "1px solid white", "padding": "10px"}),
+                html.Th("Predicted Positive", style={"border": "1px solid white", "padding": "10px"}),
             ]),
         ]),
         html.Tbody([
             html.Tr([
-                html.Th("Actual Negative"),
+                html.Th("Actual Negative", style={"border": "1px solid white", "padding": "10px"}),
                 html.Td(str(tn)),
                 html.Td(str(fp)),
             ]),
             html.Tr([
-                html.Th("Actual Positive"),
+                html.Th("Actual Positive", style={"border": "1px solid white", "padding": "10px"}),
                 html.Td(str(fn)),
                 html.Td(str(tp)),
             ]),
         ])
     ], style={
-            "border": "1px solid black",
+            "border": "2px solid white",
             "margin": "auto",
             "color": "white",
             "fontSize": "18px",
             "backgroundColor": "#282b38",
             "borderCollapse": "collapse",
             "textAlign": "center",
+            "width": "60%",
         })
